@@ -1,0 +1,73 @@
+#!/bin/bash
+# $Id: make_debp,v 1.0.1 2009/01/13 14:34:51 ricardo Exp $
+# Written by Ricardo Carlini Sperandio <rcarlini@gmail.com>.  
+# Modificado por Bruno Goncalves Araujo <www.biglinux.com.br>
+# Modificado por Rafael Neri <rafepelgmail.com>
+# Distributed under the GNU GPL
+
+# Check if user is root
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+# Get path
+path=`pwd`
+
+# Copy package to tmp
+rm -rf /tmp/package
+mkdir -p /tmp/package
+cp -a ${path}/* "/tmp/package"
+chown -R root.root /tmp/$package
+
+# validations
+if [ ! -d /tmp/package/DEBIAN ]; then
+  echo "Cannot found debian directory"
+  exit 1
+fi
+
+if [ ! -f /tmp/package/DEBIAN/control ]; then
+  echo "Cannot found control file"
+  exit 1
+fi
+
+# Get info from control file
+packageName=$(cat /tmp/package/DEBIAN/control | grep ^Package: | sed 's/^Package: \(.*\)/\1/' )
+version=$(cat /tmp/package/DEBIAN/control | grep ^Version | sed 's/^Version: \(.*\)/\1/' )
+arch=$(cat /tmp/package/DEBIAN/control | grep ^Architecture | sed 's/^Architecture: \(.*\)/\1/' )
+
+# Set release name
+releaseName=${packageName}_${version}_${arch}.deb
+
+# Remove Unnecessary files and directories
+rm -rf /tmp/package/lang
+rm -rf /tmp/package/nbproject
+rm -rf /tmp/package/project
+rm -rf /tmp/package/*.nja
+rm -rf /tmp/package/*.pot
+rm -rf /tmp/package/LICENSE
+rm -rf /tmp/package/make-deb
+rm -rf /tmp/package/make-pot
+rm -rf /tmp/package/README.md
+rm -rf /tmp/package/test.sh
+rm -rf /tmp/package/*.deb
+
+# Create MD5 SUM
+if [ -f /tmp/package/DEBIAN/md5sums ]; then
+   rm -f /tmp/package/DEBIAN/md5sums
+fi
+find /tmp/package ! -type d -print0 | xargs -0 md5sum > /tmp/package/DEBIAN/md5sums
+
+# Create instaled size diretive
+size=$(du -s /tmp/package | cut -f 1)
+sed -i "s/^\(Installed-Size:\) .*/\1 $size/" /tmp/package/DEBIAN/control 
+
+# build package
+mv /tmp/package /tmp/${packageName}
+cd /tmp
+dpkg-deb -Z bzip2 -b $packageName $releaseName
+cd -
+
+# save deb file
+mv /tmp/${releaseName} ${path}
+rm -Rf /tmp/${packageName}
