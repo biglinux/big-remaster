@@ -1,0 +1,49 @@
+######################
+# Tweaks for apt
+# by Bruno Gonçalves Araujo <bigbruno@gmail.com>
+# licensed under GPLv2 or greater.
+# released in 7/17/2015
+
+Acquire::http::timeout "10";
+APT::Immediate-Configure "false";
+DPkg::StopOnError "false"; 
+T::Cache-Limit 2200000000;
+APT { Get { Fix-Broken "true"; }; };
+
+
+# DPkg { Options {"--force-overwrite"; "--force-conflicts"; "--force-configure-any";}; };
+
+DPkg { Options {"--force-confask";}; };
+DPkg { Options {"--force-all";}; };
+DPkg { Options {"--abort-after=9999999";}; };
+DPkg::Pre-Invoke {"/usr/bin/dpkg-clean-set";};
+
+# DPkg::Pre-Invoke {"dpkg --abort-after=9999999 --configure -a "};
+
+DPkg::Post-Invoke {"mv -f /var/cache/apt/archives/lock /var/cache/apt/archives/lock-big";};
+DPkg::Post-Invoke {"apt -f install > /dev/null";};
+DPkg::Post-Invoke {"dpkg --abort-after=9999999 --configure -a "};
+DPkg::Post-Invoke {"mv -f /var/cache/apt/archives/lock-big /var/cache/apt/archives/lock";};
+
+# DPkg::Post-Invoke {"rm -f /var/cache/apt/archives/lock";};
+
+DPkg::Post-Invoke {"mv -f /var/cache/apt/archives/lock /var/cache/apt/archives/lock-big";};
+DPkg::Post-Invoke {"apt -f install > /dev/null";};
+DPkg::Post-Invoke {"dpkg --abort-after=9999999 --configure -a "};
+DPkg::Post-Invoke {"mv -f /var/cache/apt/archives/lock-big /var/cache/apt/archives/lock";};
+
+
+#DPkg::Pre-Install-Pkgs {"dpkg-preconfigure --apt --priority=low";};
+
+Acquire::http { Pipeline-Depth "5"; }
+
+Acquire::Queue-Mode "host";
+APT::Acquire::Retries 3;
+
+// Progress Bar in APT.
+APT{
+  GET{
+    DPkg::Progress-Fancy;
+    APT::Color;
+  };
+};

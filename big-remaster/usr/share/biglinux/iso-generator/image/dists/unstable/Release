@@ -1,0 +1,29 @@
+Origin: LinuxDeepin
+Label: Overlay
+Codename: unstable
+Version: dummy
+Date: Fri, 21 Jul 2017 08:04:53 UTC
+Architectures: amd64 i386
+Components: main
+Description: Linuxdeepin overlay mirror
+MD5Sum:
+ 03ebf0cacddb4377140f86420f26a47a 13825 main/binary-amd64/Packages
+ 109906b67be162e3f651f26387cd8569 3128 main/binary-amd64/Packages.gz
+ 4844e3890675eae89eaa48a38e1f52d2 126 main/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
+ 66e07db02e22ab12a18f93c8308042eb 125 main/binary-i386/Release
+SHA1:
+ 845de0d8baebf50d2cafff42691a43c6869a277e 13825 main/binary-amd64/Packages
+ 4707d8f5ade886d5e7ce1a351c011709196b73e0 3128 main/binary-amd64/Packages.gz
+ a9e679976fab343fd357fcb6edd981d5643f49a7 126 main/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
+ a08518758beba209a05737ebb678a829687f9a0c 125 main/binary-i386/Release
+SHA256:
+ 99bee212a2ae89a88b9ae286f7029c47600001733d3b8692dfeb687877b24dc4 13825 main/binary-amd64/Packages
+ 782781b8a2d13999a681e9053896a03379289aa3e52046b0e2b61b0ab3319773 3128 main/binary-amd64/Packages.gz
+ 860cf7910fdc29cda1c0d25aeb44a1dd19b2eb9f4647428df7945e679e324c36 126 main/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
+ 7924c5b83dbcf47841763ba1e7cb8ab8c94517d9c9eb87664ac4633151fb58c6 125 main/binary-i386/Release

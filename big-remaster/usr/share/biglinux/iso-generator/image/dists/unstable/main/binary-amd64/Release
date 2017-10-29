@@ -1,0 +1,6 @@
+Version: dummy
+Component: main
+Origin: LinuxDeepin
+Label: Overlay
+Architecture: amd64
+Description: Linuxdeepin overlay mirror

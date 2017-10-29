@@ -1,0 +1,422 @@
+# Portuguese translations for big-remaster package.
+# Copyright (C) 2017 THE big-remaster'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the big-remaster package.
+# Automatically generated, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: big-remaster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-10 19:35-0300\n"
+"PO-Revision-Date: 2017-10-10 19:35-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Invalid parameters."
+msgstr ""
+
+msgid "#     biglinux iso generator     #"
+msgstr ""
+
+msgid "#   Make your Ubuntu remaster  #"
+msgstr ""
+
+msgid "# First create basic system, use 32 bits or 64 bits:"
+msgstr ""
+
+msgid "--list-versions  \t\tList all versions avaliables"
+msgstr ""
+
+msgid ""
+"--create-32-bits\t\tFirst command, generate basic system, select version and "
+"work folder, example: --create-32-bits trusty \\\"/home/user/remaster32\\\""
+msgstr ""
+
+msgid ""
+"--create-64-bits\t\tFirst command, generate basic system, select version and "
+"work folder, example: --create-64-bits trusty \\\"/home/user/remaster64\\\""
+msgstr ""
+
+msgid "# Repositories"
+msgstr ""
+
+msgid ""
+"--list-repositories\t\tList all repositories in this version, example: --"
+"list-repositories trusty"
+msgstr ""
+
+msgid ""
+"--description-repository  \tView repository description, example: --"
+"description-repository trusty uniaolivre"
+msgstr ""
+
+msgid ""
+"--description-all-repositories\tView all repositories descriptions for one "
+"version, example: --description-all-repositories trusty"
+msgstr ""
+
+msgid ""
+"--add-repository\t\tAdd repository in remaster, example: --add-repository "
+"trusty uniaolivre \\\"/home/user/remaster\\\""
+msgstr ""
+
+msgid ""
+"--add-all-repositories\t\tAdd repositories in remaster, example: --add-all-"
+"repositories trusty \\\"/home/user/remaster\\\""
+msgstr ""
+
+msgid "# Packages"
+msgstr ""
+
+msgid ""
+"--install-packages-in-terminal\tInstall all packages listed in install-apps."
+"txt and install-drivers.txt, directly in terminal with apt-get, example: --"
+"install-packages-in-terminal \\\"/home/user/remaster\\\""
+msgstr ""
+
+msgid ""
+"--install-packages-in-synaptic\tInstall all packages listed in install-apps."
+"txt and install-drivers.txt, using synaptic package manager, example: --"
+"install-packages-in-synaptic \\\"/home/user/remaster\\\""
+msgstr ""
+
+msgid "--synaptic  \t\t\tManage remaster packages using synaptic"
+msgstr ""
+
+msgid "# Others"
+msgstr ""
+
+msgid ""
+"--shell\t\t\t   Login in terminal of remaster with root user for interact "
+"and manage your remaster, example: --terminal \\\"/home/user/remaster\\\""
+msgstr ""
+
+msgid ""
+"--prelink\t\t\t  Run prelink for reduce ram memory usage, example: --prelink "
+"\\\"/home/user/remaster\\\""
+msgstr ""
+
+msgid ""
+"--tweaks\t\t\t\t  Tweaks for improve system usability, see tweaks in file /"
+"usr/share/biglinux/iso-generator/tweaks.sh, example: --tweaks \\\"/home/user/"
+"remaster\\\""
+msgstr ""
+
+msgid "--gui\t\t\t\t   Open graphical interface"
+msgstr ""
+
+msgid "# Finalizing"
+msgstr ""
+
+msgid ""
+"--compact\t\t\tCompact folder chroot and generate file image/casper/"
+"filesystem.squashfs, choose compaction type, gzip for faster compactation "
+"and larger file or xz for slower compactation but smaller file, and name of "
+"your remaster, example: --compact \\\"/home/user/remaster\\\" \\\"gzip\\\" \\"
+"\"biglinux 14.04 final\\\""
+msgstr ""
+
+msgid ""
+"--makeiso\t\t\tConvert image folder in .iso file for make bootable DVD or "
+"pendrive, iso file is generated in your work folder of remaster, in the same "
+"folder as apps and drivers files, example: --makeiso \\\"/home/user/remaster"
+"\\\" \\\"biglinux 14.04 final\\\""
+msgstr ""
+
+msgid "Crie seu remaster personalizado de forma simples."
+msgstr ""
+
+msgid "GPL v2 or greater"
+msgstr ""
+
+msgid "Bruno Gonçalves"
+msgstr ""
+
+msgid "26/08/2016"
+msgstr ""
+
+msgid "https://github.com/biglinux/big-remaster"
+msgstr ""
+
+msgid "https://www.biglinux.com.br"
+msgstr ""
+
+msgid ""
+"Crie uma versão personalizada do BigLinux com os programas e configurações "
+"que desejar.\n"
+"  Esse processo demora um tempo considerável e necessita, em geral, de "
+"espaço em disco superior a 8 GB, também efetua o download de grande "
+"quantidade de dados.<p>\n"
+"  O tempo necessário dependerá dos programas escolhidos, a velocidade do "
+"computador utilizado e da conexão com a internet.<p>\n"
+"  O primeiro passo é selecionar uma pasta de trabalho, aonde os arquivos "
+"serão armazenados. É possível criar versões diferentes em um mesmo "
+"computador, basta utilizar pastas separadas."
+msgstr ""
+
+msgid "Clique aqui para escolher uma pasta de trabalho"
+msgstr ""
+
+msgid "Criar nova pasta de trabalho"
+msgstr ""
+
+msgid ""
+"* Ao criar uma nova pasta de trabalho será aberta uma janela do terminal que "
+"instalará automaticamente a base para criação do sistema, ao concluir a "
+"mesma irá se fechar automaticamente e esta janela exibirá opções de "
+"configuração."
+msgstr ""
+
+msgid "Ajuda"
+msgstr ""
+
+msgid "Cancelar"
+msgstr ""
+
+msgid "Próximo"
+msgstr ""
+
+msgid "Crie seu remaster personalizado de forma bastante simples."
+msgstr ""
+
+msgid "Arquivos compactados, para finalizar gere o arquivo .iso."
+msgstr ""
+
+msgid "Iso gerado!"
+msgstr ""
+
+msgid "Reconstrução concluída!"
+msgstr ""
+
+msgid "Remaster apagado!"
+msgstr ""
+
+msgid "Essa pasta não está vazia, selecione uma pasta vazia."
+msgstr ""
+
+msgid "Essa pasta já está sendo utilizada por outro remaster."
+msgstr ""
+
+msgid "É preciso selecionar uma pasta de trabalho."
+msgstr ""
+
+msgid "Pasta selecionada:"
+msgstr ""
+
+msgid "Espaço livre na pasta:"
+msgstr ""
+
+msgid "Espaço utilizado na pasta de cache:"
+msgstr ""
+
+msgid "Nome do remaster:"
+msgstr ""
+
+msgid "Nome"
+msgstr ""
+
+msgid "Editar install-apps.txt"
+msgstr ""
+
+msgid "Editar install-drivers.txt"
+msgstr ""
+
+msgid "Instalar pacotes definidos com o terminal"
+msgstr ""
+
+msgid "Instalar pacotes definidos com o Synaptic"
+msgstr ""
+
+msgid "Abrir o Terminal dentro do Remaster"
+msgstr ""
+
+msgid "Abrir o Synaptic dentro do Remaster"
+msgstr ""
+
+msgid "Compactar o Remaster"
+msgstr ""
+
+msgid "Gerar ISO"
+msgstr ""
+
+msgid "Reconstruir o Remaster"
+msgstr ""
+
+msgid "Apagar o Remaster"
+msgstr ""
+
+msgid "Editando o arquivo install-apps.txt."
+msgstr ""
+
+msgid "Feche o editor de textos para prosseguir."
+msgstr ""
+
+msgid "Editando o arquivo install-drivers.txt."
+msgstr ""
+
+msgid "Instalando pacotes no terminal."
+msgstr ""
+
+msgid ""
+"Confira no terminal se é necessário efetuar alguma interação, ao concluir a "
+"instalação e fechar o terminal esta tela retornará para a área de "
+"configurações."
+msgstr ""
+
+msgid "Instalando pacotes no Synaptic."
+msgstr ""
+
+msgid ""
+"Confira no Synaptic se é necessário efetuar alguma interação, ao concluir a "
+"instalação e fechar o Synaptic esta tela retornará para a área de "
+"configurações."
+msgstr ""
+
+msgid "Terminal aberto no remaster."
+msgstr ""
+
+msgid "Ao fechar o terminal esta tela retornará para a área de configurações."
+msgstr ""
+
+msgid "Synaptic aberto no remaster."
+msgstr ""
+
+msgid "Ao fechar o Synaptic esta tela retornará para a área de configurações."
+msgstr ""
+
+msgid "Compactando dados para gerar iso remasterizado."
+msgstr ""
+
+msgid ""
+"Ao concluir a compactação esta tela retornará para a área de configurações."
+msgstr ""
+
+msgid "Gerando arquivo .iso."
+msgstr ""
+
+msgid ""
+"Ao concluir a geração do iso esta tela retornará para a área de "
+"configurações."
+msgstr ""
+
+msgid "Reconstruindo o remaster."
+msgstr ""
+
+msgid ""
+"Ao concluir a reconstrução do iso esta tela retornará para a área de "
+"configurações."
+msgstr ""
+
+msgid "Apagando o remaster."
+msgstr ""
+
+msgid "Após apagar os arquivos esta tela retornará ao início."
+msgstr ""
+
+msgid ""
+"After acess remaster remember this, use exit command for logout terminal, we "
+"not recommend you just close window without use exit in remaster shell."
+msgstr ""
+
+msgid "Script concluido"
+msgstr ""
+
+msgid "Verifique acima se tudo"
+msgstr ""
+
+msgid "Ocorreu sem erros"
+msgstr ""
+
+msgid "Feche essa janela para prosseguir!"
+msgstr ""
+
+msgid "Adiciona o repositorio União Livre"
+msgstr ""
+
+msgid "--description            show details by repository"
+msgstr ""
+
+msgid "--add\t\t       add repository to system remastering"
+msgstr ""
+
+msgid "--remove\t\t       remove repository to system remastering"
+msgstr ""
+
+msgid "Adiciona o repositorio do Menu Homerun Kicker"
+msgstr ""
+
+msgid "Adiciona o repositório do simplescreenrecorder"
+msgstr ""
+
+msgid "Repositório do programa clipgrab"
+msgstr ""
+
+msgid "Adiciona o repositorio do virtualbox"
+msgstr ""
+
+msgid "Adiciona o repositorio de atualizações do libreoffice"
+msgstr ""
+
+msgid "Adiciona o repositório com os pacotes beaultiful de plugins para o gimp"
+msgstr ""
+
+msgid "Adiciona o repositorio de drivers de video atualizados"
+msgstr ""
+
+msgid ""
+"Adiciona o repositorio do java da oracle, infelizmente o java livre não "
+"funciona muito bem em 64 bits"
+msgstr ""
+
+msgid "Adiciona o repositório do google chrome"
+msgstr ""
+
+msgid ""
+"Adiciona o repositório do Firefox com patchs que o integram melhor ao KDE"
+msgstr ""
+
+msgid "Adiciona o repositório com os plugins gmic do gimp"
+msgstr ""
+
+msgid ""
+"Adiciona suporte ao gstreamer ffmpeg para dar suporte a 264 html5 no firefox"
+msgstr ""
+
+msgid "Adiciona o repositório com o plugin fresh player, para o firefox"
+msgstr ""
+
+msgid "Repositório com pacotes que adicionam suporte a partições exfat"
+msgstr ""
+
+msgid "--list-version            for list all versions"
+msgstr ""
+
+msgid ""
+"--list-repositories       for list all repositories in this version, "
+"example: --list-repositories trusty"
+msgstr ""
+
+msgid ""
+"--description             for view repository description, example: --"
+"description trusty uniaolivre"
+msgstr ""
+
+msgid ""
+"--description-all         for view all repositories description, example: --"
+"description trusty"
+msgstr ""
+
+msgid ""
+"--add     \t\t for add repository in remaster, example: --add trusty "
+"uniaolivre /home/user/remaster"
+msgstr ""
+
+msgid ""
+"--add-all     \t\t for add repository in remaster, example: --add trusty /"
+"home/user/remaster"
+msgstr ""

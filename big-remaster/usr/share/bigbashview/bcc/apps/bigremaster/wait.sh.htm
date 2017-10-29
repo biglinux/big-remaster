@@ -1,0 +1,143 @@
+#!/bin/bash
+
+# Import BigControlCenter base modules / Importa os módulos básicos do BigControlCenter
+# That's include jquery and materialize / Isso inclui o jquery e o materialize
+# http://materializecss.com/
+. /usr/share/bigbashview/bcc/shell/base.sh
+
+
+#Title/Description variables
+bcc_title="Gerador de ISOs do BigLinux"
+bcc_description=$"Crie seu remaster personalizado de forma bastante simples."
+# To disable logo use: bcc_logo="no"
+bcc_logo="logo.png"
+
+# About variables
+# To disable about use: bcc_about="no"
+bcc_about="yes"
+bcc_about_license=$"GPL v2 or greater"
+bcc_about_by=$"Bruno Gonçalves"
+bcc_about_release_date=$"26/08/2016"
+bcc_about_url_code=$"https://github.com/biglinux/big-remaster"
+bcc_about_url_project=$"https://www.biglinux.com.br"
+
+# Print header in screen
+bcc_header
+
+# Import tweaks for theme
+echo '<link rel="stylesheet" type="text/css" href="theme.css">'
+
+
+id="$p_id"
+name="$p_name"
+option="$p_option"
+
+################
+# End of create new remaster folder
+################
+
+
+
+
+
+###############
+# Start Content
+
+
+
+echo '<div class="row"><div class="col s12">'
+
+
+if [ "$p_option" = "01" ]; then
+    echo $"Editando o arquivo install-apps.txt."
+    echo "<p>"
+    echo $"Feche o editor de textos para prosseguir."
+fi
+
+if [ "$p_option" = "02" ]; then
+    echo $"Editando o arquivo install-drivers.txt."
+    echo "<p>"
+    echo $"Feche o editor de textos para prosseguir."
+fi
+
+if [ "$p_option" = "03" ]; then
+    echo $"Instalando pacotes no terminal."
+    echo "<p>"
+    echo $"Confira no terminal se é necessário efetuar alguma interação, ao concluir a instalação e fechar o terminal esta tela retornará para a área de configurações."
+fi
+
+if [ "$p_option" = "04" ]; then
+    echo $"Instalando pacotes no Synaptic."
+    echo "<p>"
+    echo $"Confira no Synaptic se é necessário efetuar alguma interação, ao concluir a instalação e fechar o Synaptic esta tela retornará para a área de configurações."
+fi
+
+if [ "$p_option" = "05" ]; then
+    echo $"Terminal aberto no remaster."
+    echo "<p>"
+    echo $"Ao fechar o terminal esta tela retornará para a área de configurações."
+fi
+
+if [ "$p_option" = "06" ]; then
+    echo $"Synaptic aberto no remaster."
+    echo "<p>"
+    echo $"Ao fechar o Synaptic esta tela retornará para a área de configurações."
+fi
+
+if [ "$p_option" = "07" ]; then
+    echo $"Compactando dados para gerar iso remasterizado."
+    echo "<p>"
+    echo $"Ao concluir a compactação esta tela retornará para a área de configurações."
+fi
+
+if [ "$p_option" = "08" ]; then
+  echo $"Gerando arquivo .iso."
+  echo "<p>"
+  echo $"Ao concluir a geração do iso esta tela retornará para a área de configurações."
+fi
+
+if [ "$p_option" = "09" ]; then
+    echo $"Reconstruindo o remaster."
+    echo "<p>"
+    echo $"Ao concluir a reconstrução do iso esta tela retornará para a área de configurações."
+fi
+
+if [ "$p_option" = "10" ]; then
+    echo $"Apagando o remaster."
+    echo "<p>"
+    echo $"Após apagar os arquivos esta tela retornará ao início."
+fi
+
+
+
+echo '<script type="text/javascript">'
+    echo "window.location.href = \"/usr/share/bigbashview/bcc/apps/bigremaster/actions.sh.htm?id=$id&name=$name&option=$option\""
+echo '</script>'
+
+
+echo '
+
+</div></div>'
+
+
+###################
+# Close content div
+echo '</div>'
+
+
+
+##############
+# Start footer
+echo '<div id="bcc_footer">'
+  echo '<a class="waves-effect waves-light btn blue-grey lighten-1"><img src=help.png>'$"Ajuda"'</a>'
+      echo '<div id="bcc_footer_right">'
+        echo '<a href="/usr/share/bigbashview/close.sh" class="waves-effect waves-light btn blue-grey lighten-1"><img src=cancel.png>'$"Cancelar"'</a>'
+        echo '<button class="btn waves-effect waves-light blue-grey lighten-1" type="submit" name="action"><img src=ok.png>'$"Próximo"'</button>'
+      echo '</div>'
+echo '</div>'
+echo '</form>'
+
+
+#########
+# The end
+echo '</body>'

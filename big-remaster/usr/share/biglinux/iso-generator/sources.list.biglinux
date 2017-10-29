@@ -1,0 +1,3 @@
+deb [by-hash=force] http://linuxdeepin.c3sl.ufpr.br/deepin/ unstable main contrib non-free
+# deb-src http://linuxdeepin.c3sl.ufpr.br/deepin/ unstable main contrib non-free
+

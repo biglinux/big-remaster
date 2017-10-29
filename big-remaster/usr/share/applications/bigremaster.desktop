@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Create your custom distribution
+Name[pt]=Crie sua distribuição personalizada
+Name[pt_BR]=Crie sua distribuição personalizada
+Exec=biglinux-iso-generator --gui
+Icon=media-dvd
+Type=Application
+StartupNotify=true
+Categories=Development;
