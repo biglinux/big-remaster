@@ -17,7 +17,7 @@
 cd "$1"
 
 # Kernel e initrd para o livecd
-mkdir -p image/live
+mkdir -p image/casper
 rm -f remaster/chroot/boot/*old-dkms*
 
 # fix keyboard
@@ -33,14 +33,26 @@ XKBOPTIONS=""
 
 BACKSPACE="guess"' > remaster/chroot/etc/default/keyboard
 
+# fix chromium icon
+cp -f remaster/chroot/usr/share/icons/hicolor/48x48/apps/chromium-browser.png remaster/chroot/usr/share/icons/hicolor/32x32/apps/chromium-browser.png
 rm -f remaster/chroot/etc/hostname
 
-cp -f $(find remaster/chroot/boot/ -name vmlinuz* |  tail -1) image/live/vmlinuz
-cp -f $(find remaster/chroot/boot/ -name initrd.img* |  tail -1) image/live/initrd.lz
+# fix ping
+chmod 4755 remaster/chroot/bin/ping
+
+
+# Corrige erros no boot
+sed -i 's|.*crash.init||g' remaster/chroot//usr/share/initramfs-tools/scripts/casper 
+
+cp -f $(find remaster/chroot/boot/ -name vmlinuz*generic* |  tail -1) image/casper/vmlinuz
+cp -f $(find remaster/chroot/boot/ -name initrd.img*generic* |  tail -1) image/casper/initrd.lz
+
+cp -f $(find remaster/chroot/boot/ -name vmlinuz*xanmod* |  tail -1) image/casper/vmlinuz-xanmod
+cp -f $(find remaster/chroot/boot/ -name initrd.img*xanmod* |  tail -1) image/casper/initrd-xanmod.lz
 
 # Gera o manifest
-chroot remaster/chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee image/live/filesystem.manifest
-cp -v image/live/filesystem.manifest image/live/filesystem.manifest-desktop
+chroot remaster/chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee image/casper/filesystem.manifest
+cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
 REMOVE='ubiquity biglinux-install-desktop-icon ubiquity-frontend-gtk ubiquity-frontend-kde live lupin-live live-initramfs deepin-installer'
 
 
@@ -49,7 +61,7 @@ live-boot live-config live-config-systemd
 
 for i in $REMOVE 
 do
-        sed -i "/${i}/d" image/live/filesystem.manifest-desktop
+        sed -i "/${i}/d" image/casper/filesystem.manifest-desktop
 done
 
 /usr/share/biglinux/iso-generator/chroot-off.sh "$1" 2> /dev/null
@@ -60,20 +72,20 @@ done
 #gzip
 if [ "$2" = "gzip" ]; then
     rm -f remaster/chroot/apt_errors*.txt
-    rm -f image/live/filesystem.squashfs
-    mksquashfs remaster/chroot image/live/filesystem.squashfs
+    rm -f image/casper/filesystem.squashfs
+    mksquashfs remaster/chroot image/casper/filesystem.squashfs -comp zstd -Xcompression-level 6 -no-xattrs
 fi
 
 
 #xz
 if [ "$2" = "xz" ]; then
     rm -f remaster/chroot/apt_errors*.txt
-    rm -f image/live/filesystem.squashfs
-    mksquashfs remaster/chroot image/live/filesystem.squashfs -comp xz -Xbcj x86 -no-xattrs -always-use-fragments -b 32768  -Xdict-size 100%
+    rm -f image/casper/filesystem.squashfs
+    mksquashfs remaster/chroot image/casper/filesystem.squashfs -comp zstd -Xcompression-level 15 -no-xattrs
 fi
 
 
-printf $(du -sx --block-size=1 remaster/chroot | cut -f1) > image/live/filesystem.size
+printf $(du -sx --block-size=1 remaster/chroot | cut -f1) > image/casper/filesystem.size
 
 
 touch image/ubuntu

@@ -33,9 +33,11 @@ cp -f "/usr/share/biglinux/iso-generator/dpkg-clean-set" "$3/remaster/chroot/usr
 
 if [ "$2" = "biglinux" ]; then
 
+
+    echo '193.62.202.27 snapshot.debian.org' >> "$3/remaster/chroot/etc/hosts"
     COUNT=0
     while [  $COUNT = 0 ]; do
-        debootstrap --arch=$1 jessie "$3/remaster/chroot"
+        debootstrap --arch=$1 disco "$3/remaster/chroot" http://ubuntu-archive.locaweb.com.br/ubuntu/
         if [ $? -eq 0 ]; then
             COUNT=1;
         fi
@@ -107,7 +109,7 @@ chroot "$3/remaster/chroot" apt-get update
 
     COUNT=0
     while [  $COUNT = 0 ]; do
-        chroot "$3/remaster/chroot" apt-get install --yes --allow-unauthenticated dbus software-properties-common wget deepin-keyring debian-archive-keyring synaptic
+        chroot "$3/remaster/chroot" apt-get install --yes --allow-unauthenticated dbus software-properties-common wget debian-archive-keyring synaptic
         if [ $? -eq 0 ]; then
             COUNT=1;
         fi

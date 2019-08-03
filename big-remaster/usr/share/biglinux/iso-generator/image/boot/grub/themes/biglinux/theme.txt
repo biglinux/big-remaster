@@ -1,0 +1,56 @@
+# GRUB2 gfxmenu based in deadora and Linux Aurora Penguinis GRUB2 theme based on Vimix
+# Designed for any resolution
+
+# Global Property
+title-text: "Utilize as setas do teclado para escolher e pressione enter"
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+terminal-font: "DejaVu Mono 14"
+title-text: ""
+title-font: "DejaVu Sans Bold 14"
+title-color: "#ffffff"
+
+# Show the boot menu
++ boot_menu {
+  left = 20%
+  top = 29%
+  width = 70%
+  height = 60%
+  item_font = "DejaVu Sans Bold 14"
+  item_color = "#ffffff"
+  selected_item_color = "#ffffff"
+  item_height = 24
+  item_spacing = 12
+  selected_item_pixmap_style = "select_*.png"
+}
+
+# Show a countdown message using the label component
++ label {
+  top = 80%
+  left = 28%
+  width = 30%
+  align = "center"
+  id = "__timeout__"
+  text = "Utilize as setas do teclado para escolher e pressione enter"
+  color = "#FFFFFF"
+  font = "DejaVu Sans Bold 14"
+}
+
++ progress_bar {
+		id = "__timeout__"
+		left = 16%
+		width = 700
+		top = 90%
+		height = 30
+		show_text = false
+		font = "DejaVu Sans Bold 14"
+		text_color = "#000000"
+		bar_style = "bar_*.png"
+		highlight_style = "bar_hl_*.png"
+}

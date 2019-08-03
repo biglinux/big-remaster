@@ -236,7 +236,7 @@ case "$1" in
 
     --gui)
     xhost +
-    gksu "bigbashview /usr/share/bigbashview/bcc/apps/bigremaster/index.sh.htm -s 1050x600 -i /usr/share/bigbashview/bcc/apps/bigremaster/dvd.png"
+    bigsudo "bigbashview /usr/share/bigbashview/bcc/apps/bigremaster/index.sh.htm -s 1050x600 -i /usr/share/bigbashview/bcc/apps/bigremaster/dvd.png"
     exit
 ;;
 

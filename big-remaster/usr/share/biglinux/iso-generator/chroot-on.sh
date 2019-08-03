@@ -52,6 +52,7 @@ fi
 # Configuracao basica do dbus
 chroot "$1/remaster/chroot" dbus-uuidgen | tee "$1/remaster/chroot/var/lib/dbus/machine-id"
 
+
 # Roda o fix_initctl.sh
 cp -f "/usr/share/biglinux/iso-generator/fix_initctl.sh" "$1/remaster/chroot/fix_initctl.sh"
 chroot "$1/remaster/chroot" /fix_initctl.sh

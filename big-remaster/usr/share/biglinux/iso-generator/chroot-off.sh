@@ -21,6 +21,8 @@ then
     mv "$1/remaster/chroot/var/cache/apt/archives" "$1/cache"
 fi
 
+
+
 mkdir -p "$1/remaster/chroot/var/cache/apt/archives"
 cp -f "/usr/share/biglinux/iso-generator/clear.sh" "$1/remaster/chroot/clear.sh"
 chroot "$1/remaster/chroot" /clear.sh

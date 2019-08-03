@@ -51,7 +51,7 @@ echo '<div class="row"><div class="col s12">'
             <tr>
               <td style="padding-left:20px">'$"Nome do remaster:"'</td>
               <td class="left-align col s6"><div class="input-field inline">
-                <form action="wait.sh.htm" method="post">
+                <form action="wait.sh.htm" method="get">
                 <input type="hidden" name="id" value="'"$id"'">
                 <input id="name" name="name" type="text" class="validate light-shadow blue-grey lighten-5" value="'"$(grep ^name "$id" | cut -f2 -d"=")"'">
                 <label for="name">' $"Nome" '</label></div></td>

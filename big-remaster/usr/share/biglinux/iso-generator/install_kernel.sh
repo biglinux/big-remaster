@@ -10,12 +10,11 @@
 export DEBIAN_FRONTEND=noninteractive
 
 # Instalacao do kernel e pacotes basicos
-apt-get install --yes --force-yes ubuntu-standard casper lupin-casper
-apt-get install --yes --force-yes discover laptop-detect os-prober
+apt-get install --yes --force-yes ubiquity-casper lupin-casper
+apt-get install --yes --force-yes synaptic laptop-detect os-prober eatmydata
 #Verificar necessidade de assume yes
 apt-get install --yes --force-yes linux-generic linux-tools-generic
 
-apt-get install --yes --force-yes linux-image-deepin-amd64 linux-headers-deepin-amd64
 # Adiciona chave do respositorio de extras do Ubuntu
 apt-key adv --keyserver keyserver.ubuntu.com --recv 3E5C1192
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4DF9B28CA252A784
