@@ -1,9 +1,9 @@
 Package: big-remaster
-Version: 1.0.1-2big1
-Depends: debootstrap, bigbashview, gksu, synaptic, zenity, xterm, xorriso, isolinux
+Version: 1.0.1-2big2
+Depends: debootstrap, bigbashview, bigsudo, synaptic, zenity, xterm, xorriso, isolinux
 Architecture: all
 Maintainer: Bruno Goncalves <biglinux.com.br>
 Section: admin
 Priority: optional
-Installed-Size:43548
-Description: Make your BigLinux remaster, based in Deepin repository
+Installed-Size:10808
+Description: Make your BigLinux remaster, based in Ubuntu repository
