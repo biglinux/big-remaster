@@ -1,9 +1,20 @@
 [Desktop Entry]
-Name=Create your custom distribution
-Name[pt]=Crie sua distribuição personalizada
-Name[pt_BR]=Crie sua distribuição personalizada
-Exec=biglinux-iso-generator --gui
-Icon=media-dvd
-Type=Application
-StartupNotify=true
 Categories=Development;
+Comment[pt_BR]=
+Comment=
+Exec=biglinux-iso-generator --gui
+GenericName[pt_BR]=
+GenericName=
+Icon=media-optical-recordable
+MimeType=
+Name[pt_BR]=Crie sua distribuição personalizada
+Name=Crie sua distribuição personalizada
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
