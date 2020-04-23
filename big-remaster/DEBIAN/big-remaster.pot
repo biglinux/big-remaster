@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: big-remaster\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2017-10-10 19:35-0300\n"
+        "POT-Creation-Date: 2020-04-23 05:39-0300\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,7 +118,7 @@ msgid   "--makeiso\t\t\tConvert image folder in .iso file for make bootable "
         "makeiso \\\"/home/user/remaster\\\" \\\"biglinux 14.04 final\\\""
 msgstr  ""
 
-msgid   "Crie seu remaster personalizado de forma simples."
+msgid   "Crie seu remaster personalizado de forma bastante simples."
 msgstr  ""
 
 msgid   "GPL v2 or greater"
@@ -136,42 +136,6 @@ msgstr  ""
 msgid   "https://www.biglinux.com.br"
 msgstr  ""
 
-msgid   "Crie uma versão personalizada do BigLinux com os programas e "
-        "configurações que desejar.\n"
-        "  Esse processo demora um tempo considerável e necessita, em geral, "
-        "de espaço em disco superior a 8 GB, também efetua o download de "
-        "grande quantidade de dados.<p>\n"
-        "  O tempo necessário dependerá dos programas escolhidos, a "
-        "velocidade do computador utilizado e da conexão com a internet.<p>\n"
-        "  O primeiro passo é selecionar uma pasta de trabalho, aonde os "
-        "arquivos serão armazenados. É possível criar versões diferentes em "
-        "um mesmo computador, basta utilizar pastas separadas."
-msgstr  ""
-
-msgid   "Clique aqui para escolher uma pasta de trabalho"
-msgstr  ""
-
-msgid   "Criar nova pasta de trabalho"
-msgstr  ""
-
-msgid   "* Ao criar uma nova pasta de trabalho será aberta uma janela do "
-        "terminal que instalará automaticamente a base para criação do "
-        "sistema, ao concluir a mesma irá se fechar automaticamente e esta "
-        "janela exibirá opções de configuração."
-msgstr  ""
-
-msgid   "Ajuda"
-msgstr  ""
-
-msgid   "Cancelar"
-msgstr  ""
-
-msgid   "Próximo"
-msgstr  ""
-
-msgid   "Crie seu remaster personalizado de forma bastante simples."
-msgstr  ""
-
 msgid   "Arquivos compactados, para finalizar gere o arquivo .iso."
 msgstr  ""
 
@@ -182,6 +146,15 @@ msgid   "Reconstrução concluída!"
 msgstr  ""
 
 msgid   "Remaster apagado!"
+msgstr  ""
+
+msgid   "Ajuda"
+msgstr  ""
+
+msgid   "Cancelar"
+msgstr  ""
+
+msgid   "Próximo"
 msgstr  ""
 
 msgid   "Essa pasta não está vazia, selecione uma pasta vazia."
@@ -236,6 +209,33 @@ msgid   "Reconstruir o Remaster"
 msgstr  ""
 
 msgid   "Apagar o Remaster"
+msgstr  ""
+
+msgid   "Crie seu remaster personalizado de forma simples."
+msgstr  ""
+
+msgid   "Crie uma versão personalizada do BigLinux com os programas e "
+        "configurações que desejar.\n"
+        "  Esse processo demora um tempo considerável e necessita, em geral, "
+        "de espaço em disco superior a 8 GB, também efetua o download de "
+        "grande quantidade de dados.<p>\n"
+        "  O tempo necessário dependerá dos programas escolhidos, a "
+        "velocidade do computador utilizado e da conexão com a internet.<p>\n"
+        "  O primeiro passo é selecionar uma pasta de trabalho, aonde os "
+        "arquivos serão armazenados. É possível criar versões diferentes em "
+        "um mesmo computador, basta utilizar pastas separadas."
+msgstr  ""
+
+msgid   "Clique aqui para escolher uma pasta de trabalho"
+msgstr  ""
+
+msgid   "Criar nova pasta de trabalho"
+msgstr  ""
+
+msgid   "* Ao criar uma nova pasta de trabalho será aberta uma janela do "
+        "terminal que instalará automaticamente a base para criação do "
+        "sistema, ao concluir a mesma irá se fechar automaticamente e esta "
+        "janela exibirá opções de configuração."
 msgstr  ""
 
 msgid   "Editando o arquivo install-apps.txt."
@@ -304,9 +304,62 @@ msgstr  ""
 msgid   "Após apagar os arquivos esta tela retornará ao início."
 msgstr  ""
 
-msgid   "After acess remaster remember this, use exit command for logout "
-        "terminal, we not recommend you just close window without use exit in "
-        "remaster shell."
+msgid   "Repositório do programa clipgrab"
+msgstr  ""
+
+msgid   "--description            show details by repository"
+msgstr  ""
+
+msgid   "--add\t\t       add repository to system remastering"
+msgstr  ""
+
+msgid   "--remove\t\t       remove repository to system remastering"
+msgstr  ""
+
+msgid   "Repositório com pacotes que adicionam suporte a partições exfat"
+msgstr  ""
+
+msgid   "Adiciona o repositório do Firefox com patchs que o integram melhor "
+        "ao KDE"
+msgstr  ""
+
+msgid   "Adiciona o repositório com o plugin fresh player, para o firefox"
+msgstr  ""
+
+msgid   "Adiciona o repositório com os pacotes beaultiful de plugins para o "
+        "gimp"
+msgstr  ""
+
+msgid   "Adiciona o repositório com os plugins gmic do gimp"
+msgstr  ""
+
+msgid   "Adiciona o repositório do google chrome"
+msgstr  ""
+
+msgid   "Adiciona suporte ao gstreamer ffmpeg para dar suporte a 264 html5 no "
+        "firefox"
+msgstr  ""
+
+msgid   "Adiciona o repositorio do Menu Homerun Kicker"
+msgstr  ""
+
+msgid   "Adiciona o repositorio de atualizações do libreoffice"
+msgstr  ""
+
+msgid   "Adiciona o repositorio do java da oracle, infelizmente o java livre "
+        "não funciona muito bem em 64 bits"
+msgstr  ""
+
+msgid   "Adiciona o repositório do simplescreenrecorder"
+msgstr  ""
+
+msgid   "Adiciona o repositorio União Livre"
+msgstr  ""
+
+msgid   "Adiciona o repositorio do virtualbox"
+msgstr  ""
+
+msgid   "Adiciona o repositorio de drivers de video atualizados"
 msgstr  ""
 
 msgid   "Script concluido"
@@ -319,64 +372,6 @@ msgid   "Ocorreu sem erros"
 msgstr  ""
 
 msgid   "Feche essa janela para prosseguir!"
-msgstr  ""
-
-msgid   "Adiciona o repositorio União Livre"
-msgstr  ""
-
-msgid   "--description            show details by repository"
-msgstr  ""
-
-msgid   "--add\t\t       add repository to system remastering"
-msgstr  ""
-
-msgid   "--remove\t\t       remove repository to system remastering"
-msgstr  ""
-
-msgid   "Adiciona o repositorio do Menu Homerun Kicker"
-msgstr  ""
-
-msgid   "Adiciona o repositório do simplescreenrecorder"
-msgstr  ""
-
-msgid   "Repositório do programa clipgrab"
-msgstr  ""
-
-msgid   "Adiciona o repositorio do virtualbox"
-msgstr  ""
-
-msgid   "Adiciona o repositorio de atualizações do libreoffice"
-msgstr  ""
-
-msgid   "Adiciona o repositório com os pacotes beaultiful de plugins para o "
-        "gimp"
-msgstr  ""
-
-msgid   "Adiciona o repositorio de drivers de video atualizados"
-msgstr  ""
-
-msgid   "Adiciona o repositorio do java da oracle, infelizmente o java livre "
-        "não funciona muito bem em 64 bits"
-msgstr  ""
-
-msgid   "Adiciona o repositório do google chrome"
-msgstr  ""
-
-msgid   "Adiciona o repositório do Firefox com patchs que o integram melhor "
-        "ao KDE"
-msgstr  ""
-
-msgid   "Adiciona o repositório com os plugins gmic do gimp"
-msgstr  ""
-
-msgid   "Adiciona suporte ao gstreamer ffmpeg para dar suporte a 264 html5 no "
-        "firefox"
-msgstr  ""
-
-msgid   "Adiciona o repositório com o plugin fresh player, para o firefox"
-msgstr  ""
-
-msgid   "Repositório com pacotes que adicionam suporte a partições exfat"
 msgstr  ""
 
 msgid   "--list-version            for list all versions"
@@ -400,4 +395,9 @@ msgstr  ""
 
 msgid   "--add-all     \t\t for add repository in remaster, example: --add "
         "trusty /home/user/remaster"
+msgstr  ""
+
+msgid   "After acess remaster remember this, use exit command for logout "
+        "terminal, we not recommend you just close window without use exit in "
+        "remaster shell."
 msgstr  ""

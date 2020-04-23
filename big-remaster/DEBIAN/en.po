@@ -1,14 +1,14 @@
 # Portuguese translations for big-remaster package.
-# Copyright (C) 2017 THE big-remaster'S COPYRIGHT HOLDER
+# Copyright (C) 2020 THE big-remaster'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the big-remaster package.
-# Automatically generated, 2017.
+# Automatically generated, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: big-remaster\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-23 05:39-0300\n"
-"PO-Revision-Date: 2017-10-10 19:35-0300\n"
+"PO-Revision-Date: 2020-04-23 05:39-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: pt\n"
