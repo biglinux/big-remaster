@@ -28,9 +28,9 @@ bcc_header
 echo '<link rel="stylesheet" type="text/css" href="theme.css">'
 
 
-id="$p_id"
-name="$p_name"
-option="$p_option"
+id="$id"
+name="$name"
+option="$option"
 
 ################
 # End of create new remaster folder
@@ -48,61 +48,61 @@ option="$p_option"
 echo '<div class="row"><div class="col s12">'
 
 
-if [ "$p_option" = "01" ]; then
+if [ "$option" = "01" ]; then
     echo $"Editando o arquivo install-apps.txt."
     echo "<p>"
     echo $"Feche o editor de textos para prosseguir."
 fi
 
-if [ "$p_option" = "02" ]; then
+if [ "$option" = "02" ]; then
     echo $"Editando o arquivo install-drivers.txt."
     echo "<p>"
     echo $"Feche o editor de textos para prosseguir."
 fi
 
-if [ "$p_option" = "03" ]; then
+if [ "$option" = "03" ]; then
     echo $"Instalando pacotes no terminal."
     echo "<p>"
     echo $"Confira no terminal se é necessário efetuar alguma interação, ao concluir a instalação e fechar o terminal esta tela retornará para a área de configurações."
 fi
 
-if [ "$p_option" = "04" ]; then
+if [ "$option" = "04" ]; then
     echo $"Instalando pacotes no Synaptic."
     echo "<p>"
     echo $"Confira no Synaptic se é necessário efetuar alguma interação, ao concluir a instalação e fechar o Synaptic esta tela retornará para a área de configurações."
 fi
 
-if [ "$p_option" = "05" ]; then
+if [ "$option" = "05" ]; then
     echo $"Terminal aberto no remaster."
     echo "<p>"
     echo $"Ao fechar o terminal esta tela retornará para a área de configurações."
 fi
 
-if [ "$p_option" = "06" ]; then
+if [ "$option" = "06" ]; then
     echo $"Synaptic aberto no remaster."
     echo "<p>"
     echo $"Ao fechar o Synaptic esta tela retornará para a área de configurações."
 fi
 
-if [ "$p_option" = "07" ]; then
+if [ "$option" = "07" ]; then
     echo $"Compactando dados para gerar iso remasterizado."
     echo "<p>"
     echo $"Ao concluir a compactação esta tela retornará para a área de configurações."
 fi
 
-if [ "$p_option" = "08" ]; then
+if [ "$option" = "08" ]; then
   echo $"Gerando arquivo .iso."
   echo "<p>"
   echo $"Ao concluir a geração do iso esta tela retornará para a área de configurações."
 fi
 
-if [ "$p_option" = "09" ]; then
+if [ "$option" = "09" ]; then
     echo $"Reconstruindo o remaster."
     echo "<p>"
     echo $"Ao concluir a reconstrução do iso esta tela retornará para a área de configurações."
 fi
 
-if [ "$p_option" = "10" ]; then
+if [ "$option" = "10" ]; then
     echo $"Apagando o remaster."
     echo "<p>"
     echo $"Após apagar os arquivos esta tela retornará ao início."

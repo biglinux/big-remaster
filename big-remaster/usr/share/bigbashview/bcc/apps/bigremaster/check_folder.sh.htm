@@ -35,7 +35,7 @@ echo '<link rel="stylesheet" type="text/css" href="theme.css">'
 
 cd "/usr/share/bigbashview/bcc/apps/bigremaster/config"
 
-if [ "$p_folder" = "new_folder" ]; then
+if [ "$folder" = "new_folder" ]; then
     zenity --attach="$windowID" --file-selection --directory --filename=/home/ > /usr/share/bigbashview/bcc/apps/bigremaster/temp/folder.txt
         # Check if folder is empty
         if [ "$(ls "$(cat /usr/share/bigbashview/bcc/apps/bigremaster/temp/folder.txt)" | wc -c)" != "0" ]; then
@@ -78,12 +78,12 @@ name=BigRemaster 1.0" > $file_exist
         # Add files in new folder
         xterm -e 'biglinux-iso-generator --create-64-bits biglinux "$(cat /usr/share/bigbashview/bcc/apps/bigremaster/temp/folder.txt)"'
 else
-  id=$p_folder
+  id=$folder
 fi
 
 
 # Check for folder NOT selected
-if [ "$p_folder" = "" ]; then
+if [ "$folder" = "" ]; then
     zenity --attach="$windowID"  --error --text=$"É preciso selecionar uma pasta de trabalho."
     echo '<meta http-equiv="refresh" content="0; url=index.sh.htm" />'
 fi

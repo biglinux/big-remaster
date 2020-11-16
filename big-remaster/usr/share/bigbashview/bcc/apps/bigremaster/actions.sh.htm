@@ -28,7 +28,7 @@ bcc_header
 echo '<link rel="stylesheet" type="text/css" href="theme.css">'
 
 
-id="$p_id"
+id="$id"
 selected_folder="$(grep ^folder "/usr/share/bigbashview/bcc/apps/bigremaster/config/$id"| cut -f2 -d"=")"
 
 
@@ -38,9 +38,9 @@ selected_folder="$(grep ^folder "/usr/share/bigbashview/bcc/apps/bigremaster/con
 # End of create new remaster folder
 ################
 
-id="$p_id"
-name="$p_name"
-option="$p_option"
+id="$id"
+name="$name"
+option="$option"
 
 sed -i "s|^ *\bname\b *=.*|name=$name|" "/usr/share/bigbashview/bcc/apps/bigremaster/config/$id"
 
@@ -52,31 +52,31 @@ sed -i "s|^ *\bname\b *=.*|name=$name|" "/usr/share/bigbashview/bcc/apps/bigrema
 
 echo '<div class="row"><div class="col s12">'
 
-if [ "$p_option" = "01" ]; then
+if [ "$option" = "01" ]; then
     xed "$selected_folder/install-apps.txt"
 fi
 
-if [ "$p_option" = "02" ]; then
+if [ "$option" = "02" ]; then
     xed "$selected_folder/install-drivers.txt"
 fi
 
-if [ "$p_option" = "03" ]; then
+if [ "$option" = "03" ]; then
     deepin-terminal -e biglinux-iso-generator --install-packages-in-terminal "$selected_folder"
 fi
 
-if [ "$p_option" = "04" ]; then
+if [ "$option" = "04" ]; then
     biglinux-iso-generator --install-packages-in-synaptic "$selected_folder"
 fi
 
-if [ "$p_option" = "05" ]; then
+if [ "$option" = "05" ]; then
     xterm -e biglinux-iso-generator --shell "$selected_folder"
 fi
 
-if [ "$p_option" = "06" ]; then
+if [ "$option" = "06" ]; then
     biglinux-iso-generator --synaptic "$selected_folder"
 fi
 
-if [ "$p_option" = "07" ]; then
+if [ "$option" = "07" ]; then
 
     zenity --attach="$windowID" --question --text="Deseja compactar o iso em formato XZ?
 
@@ -97,7 +97,7 @@ Responda sim para utilizar compactação XZ ou não para utilizar GZIP."
 zenity --attach="$windowID" --info --text=$"Arquivos compactados, para finalizar gere o arquivo .iso."
 fi
 
-if [ "$p_option" = "08" ]; then
+if [ "$option" = "08" ]; then
 
     #Confere se o arquivo, diretório, link, ou arquivo especial existe
     if [ -e "$selected_folder/$name.iso" ]; then
@@ -114,12 +114,12 @@ if [ "$p_option" = "08" ]; then
 
 fi
 
-if [ "$p_option" = "09" ]; then
+if [ "$option" = "09" ]; then
     xterm -e biglinux-iso-generator --create-64-bits biglinux "$selected_folder"
     zenity --attach="$windowID" --info --text=$"Reconstrução concluída!"
 fi
 
-if [ "$p_option" = "10" ]; then
+if [ "$option" = "10" ]; then
     zenity --attach="$windowID" --question --text="Deseja apagar a pasta $selected_folder?"
     if [ $? = 0 ]; then
         rm -Rf "$selected_folder"
